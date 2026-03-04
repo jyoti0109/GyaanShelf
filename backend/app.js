@@ -15,7 +15,11 @@ app.use(express.json());
 //Connection
 require("./conn/conn");
 
+app.get("/", (req, res) => {
+  res.send("GyaanShelf Library Management System API is running");
+});
 //Calling Routes
+
 app.use("/api/v1", user);
 app.use("/api/v1", book);
 app.use("/api/v1", cart);
